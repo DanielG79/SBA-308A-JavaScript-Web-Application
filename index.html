@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dogs</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <div class="dog-gallery">
+        <!-- The JavaScript code will dynamically create and append the dog cards here -->
+    </div>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <div class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search dogs..." id="search-input">
+                    <button class="btn btn-success" id="search-button">Search</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container my-4">
+            <div class="dog-gallery">
+                <div class="d-flex justify-content-center mb-3">
+                    <button class="btn btn-success me-2" id="prev-page">Previous</button>
+                    <span class="align-self-center" id="current-page">1</span>
+                    <button class="btn btn-success ms-2" id="next-page">Next</button>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4" id="dog-grid"></div>
+            </div>
+
+            <div class="dog-details my-4">
+                <h2>Dog Details</h2>
+                <form id="dog-form" class="row g-3">
+                    <div class="col-md-6">
+                        <label for="breed" class="form-label">Breed:</label>
+                        <input type="text" class="form-control" id="breed" name="breed" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="age" class="form-label">Age:</label>
+                        <input type="number" class="form-control" id="age" name="age" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="size" class="form-label">Size:</label>
+                        <input type="text" class="form-control" id="size" name="size" required>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-success">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="app.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
